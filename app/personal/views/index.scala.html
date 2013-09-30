@@ -3,7 +3,7 @@
 <h2>PhD candidate at UCSD in computer vision</h2>
 I am a PhD candidate in the department of <a href="http://www-cse.ucsd.edu/">computer science and engineering</a> at the University of California, San Diego, advised by <a href="http://cseweb.ucsd.edu/~sjb/">Serge Belongie</a>.
 My research interests include computer vision and machine learning.
-I also have a fatal attraction to functional programming languages. 
+I also have a fatal attraction to sparse methods and functional programming languages. 
 
 <h1>Education</h1>
 <p>	
@@ -20,9 +20,154 @@ During this time, I attended the <a href="http://mlg.eng.cam.ac.uk/mlss09/">Mach
 In 2009, I switched my focus to computer vision with <a href="http://cseweb.ucsd.edu/~sjb/">Serge Belongie</a>, with whom I have since remained.
 </p>
 
-<h1>Work experience</h1>
-
 <h1>Research</h1>
+<p>
+My primary area of research is in local descriptor methods, e.g. <a href="http://en.wikipedia.org/wiki/Scale-invariant_feature_transform">SIFT</a>, which are used in computer vision to compare local regions of images.
+They are building blocks for many computer vision applications, including structure-from-motion and object detection and recognition.
+</p>
+
+<p>
+From an internship I did at Google, I have an abiding interest in fast and/or approximate methods for nearest neighbor (NN) search.
+NN search is a fundamental technology underlying many machine learning techniques.
+In particular, I'm interested in the non-vector-space case, where methods such as projection-based locality sensitive hashing cannot be applied. 
+</p>
+
+<p>
+I am also strongly interested in sparse methods for image representation, including dictionary learning and compressive sensing.
+Such methods can be used to capture the relevant signal in images, without requiring human-designed features.
+In particular, I am interested in how such methods may be sped up, as it appears computational efficiency is the main blocker to wider adoption.  
+</p>
+
+<h2>Publications, talks, and research code</h2>
+<h3>2013</h3>
+<ul>
+<li>
+PUBLICATION:
+Eric M. Christiansen, Vincent Rabaud, Andrew Ziegler, Irfan Essa, David Kriegman, Serge Belongie, 
+"Match-time covariance for descriptors", 
+British Machine Vision Conference (BMVC), 2013.
+(poster)
+</li>
+<li>
+PUBLICATION:
+Arturo Flores, Eric M. Christiansen, David Kriegman, Serge Belongie,
+"Camera distance from face images",
+International Symposium on Visual Computing (ISVC), 2013.
+(poster)
+</li>
+<li>
+PUBLICATION and TALK:
+Eric M. Christiansen, Iljung Sam Kwak, Serge Belongie, David Kriegman, 
+"Face box shape and verification", 
+International Symposium on Visual Computing (ISVC), 2013.
+(oral)
+</li>
+</ul>
+
+<h3>2012</h3>
+<ul>
+<li id="LUCID">
+PUBLICATION:
+Andrew Ziegler, Eric Christiansen, David Kriegman, Serge Belongie, 
+"Locally Uniform Comparison Image Descriptor", 
+Advances in Neural Information Processing Systems (NIPS), 2012. 
+(poster)
+</li>
+<li id="eLUCID">
+CODE:
+Andrew Ziegler, Eric Christiansen, Vincent Rabaud,
+"Elucidating comparison-based descriptors",
+A built-for-mobile local descriptor, developed at Willow Garage.
+[<a href="https://github.com/emchristiansen/eLUCID">code</a>]
+</li>
+</ul>
+
+<h3>2011</h3>
+<ul>
+<li>
+CODE:
+Eric Christiansen,
+"GPU Acceleration of Source Inference in Shift Invariant Sparse Coding",
+A class project, using OpenCL to accelerate sparse coding inference.
+[<a href="https://www.dropbox.com/s/x8ez1n084v6i8pc/cse262_final.pdf">report</a>, 
+<a href="https://www.dropbox.com/sh/o2lu9sgnvo1s4cs/mLexpQTxyW">code</a>]
+</li>
+<li>
+CODE:
+Eric Christiansen,
+"mbtree",
+An implementation of metric-ball trees for nearest neighbor search, in Scala.
+[<a href="https://github.com/emchristiansen/mbtree">code</a>]
+</li>
+<li>
+CODE:
+Eric Christiansen,
+"DistanceLSH",
+An implementation of a metric hashing for nearest neighbor search, in Haskell.
+[<a href="https://github.com/emchristiansen/DistanceLSH">code</a>]
+</li>
+</ul>
+
+
+
+<h3>2010</h3>
+<ul>
+<li>
+PUBLICATION and TALK:
+Tess Winlock, Eric M. Christiansen, Serge Belongie, 
+"Toward real-time grocery detection for the visually impaired", 
+Workshop for Computer Vision Applications for the Visually Impaired (CVAVI), 2010. 
+(oral)
+</li>
+</ul>
+
+<h3>2009</h3>
+<ul>
+<li>
+TALK:
+Eric M. Christiansen, 
+"An upper bound on prototype set size for condensed nearest neighbor", 
+presented at the 2009 <a \href="http://mlg.eng.cam.ac.uk/mlss09/">Machine Learning Summer School</a>, Cambridge University, UK. 
+(poster)
+</li>
+</ul>
+
+<h3>2008</h3>
+<ul>
+<li>
+PUBLICATION:
+Joseph P. McCleery, Lingyun Zhang, Liezhong Ge, Zhe Wang, Eric M. Christiansen, Kang Lee, Garrison W. Cottrell, 
+"The roles of visual expertise and visual input in the face inversion effect: Behavioral and neurocomputational evidence", 
+Vision Research, 2008. 
+(journal)
+</li>
+</ul>
+
+<h3>2007</h3>
+<ul>
+<li>
+PUBLICATION:
+Matthew H. Tong, Adam D. Bickett, Eric M. Christiansen, Garrison W. Cottrell, 
+"Learning grammatical structure with Echo State Networks", 
+Neural Networks, 2007. 
+(journal)
+</li>
+</ul>
+
+<h1>Work experience</h1>
+To date, I have completed 16 months of internships while also in the PhD program.
+I find industry to be a refreshing change of pace.
+
+<h3>2012 - 2013: Willow Garage</h3>
+In June 2012 I started as a 3-month research intern at <a href="http://www.willowgarage.com/">Willow Garage</a>, working in robot perception.
+I liked it so much that I twice extended the internship, finally ending in March 2013.
+While there, I:
+<ul>
+<li>
+Developed a similarity-invariant version of the <a href="#LUCID">LUCID</a> descriptor.
+This new descriptor, <a href="#eLUCID">eLUCID</a>, is especially fast on mobile devices. 
+</li> 
+</ul>
 
 <h1 id="projects">Projects</h1>
 
