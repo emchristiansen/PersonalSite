@@ -1,11 +1,12 @@
 @main("Eric Christiansen") {
-<h1>Eric Christiansen</h1>
+<h1 id="EricChristiansen">Eric Christiansen</h1>
 <h2>PhD candidate at UCSD in computer vision</h2>
 I am a PhD candidate in the department of <a href="http://www-cse.ucsd.edu/">computer science and engineering</a> at the University of California, San Diego, advised by <a href="http://cseweb.ucsd.edu/~sjb/">Serge Belongie</a>.
 My research interests include computer vision and machine learning.
 I also have a fatal attraction to sparse methods and functional programming languages. 
 
-<h1>Education</h1>
+<hr>
+<h1 id="Education">Education</h1>
 <p>	
 While an undergrad at <a href="http://www.swarthmore.edu/">Swarthmore College</a>, I worked in the summers with <a href="http://www.cse.ucsd.edu/~gary/">Gary Cottrell</a> on a variety of cognitive science topics, thanks to whom I have an interest in machine vision and biologically inspired models.
 In 2008 I graduated with honors with a BA in math and a minor in computer science.
@@ -20,7 +21,54 @@ During this time, I attended the <a href="http://mlg.eng.cam.ac.uk/mlss09/">Mach
 In 2009, I switched my focus to computer vision with <a href="http://cseweb.ucsd.edu/~sjb/">Serge Belongie</a>, with whom I have since remained.
 </p>
 
-<h1>Research</h1>
+<hr>
+<h1 id="WorkExperience">Work experience</h1>
+To date, I have been in the PhD program for @personal.controllers.PersonalSite.phdMonth months, and 16 of those have been spent in internships.
+I find industry to be a refreshing change of pace.
+
+<h3>2012 - 2013: Willow Garage</h3>
+<p>
+In June 2012 I started as a 3-month research intern at <a href="http://www.willowgarage.com/">Willow Garage</a>, working in robot perception.
+I liked it so much that I twice extended the internship, finally ending in March 2013.
+While there, I:
+<ul>
+<li>
+Developed a similarity-invariant version of the <a href="#LUCID">LUCID</a> descriptor.
+This new descriptor, <a href="#eLUCID">eLUCID</a>, is especially fast on mobile devices. 
+</li>
+<li>
+Developed a <a href="#MTC">match-time covariant local descriptor</a> which is extremely robust to changes in rotation and scale.
+</li>
+<li>
+Created <a href="#BillyPilgrim">Billy Pilgrim</a>, an open-source framework for local descriptor evaluation. 
+</li>
+<li>
+Created an <a href="#OpenCVJava">automatic Java interface generator</a> for OpenCV.
+</li>
+</ul>
+See <a href="http://www.willowgarage.com/blog/2013/04/03/optimizing-computer-vision-and-new-tools-perception-research">this blog post</a> for more information on the above.
+</p>
+
+<p>
+While at Willow, I also organized two programs for the wider benefit of the company.
+First, I taught a twice-weekly CrossFit class, using equipment Willow purchased for the occasion.
+Second, when Willow had to lay off its kitchen staff, I organized company-wide catering, paid for by the employees.
+This inspired me to create <a href="#FoodForThought">Food for Thought</a> at UCSD.
+</p>
+
+<h3>Summers of 2011 and 2010: Google</h3>
+<p>
+I had two 3-month internships at Google in the summers of 2011 and 2010.
+In 2011, I was at the LA and NYC offices, working on Google Goggles research and backend infrastructure.
+In 2010, I was at the Mountain View office, helping the webcrawler to detect and appropriately handle duplicate websites.
+</p>
+
+<p>
+For earlier work experience, see my <a href="https://www.dropbox.com/s/1zlpmgtztj9w0t2/EricChristiansenResume.pdf">CV</a>.
+</p>
+
+<hr>
+<h1 id="Research">Research</h1>
 <p>
 My primary area of research is in local descriptor methods, e.g. <a href="http://en.wikipedia.org/wiki/Scale-invariant_feature_transform">SIFT</a>, which are used in computer vision to compare local regions of images.
 They are building blocks for many computer vision applications, including structure-from-motion and object detection and recognition.
@@ -41,7 +89,7 @@ In particular, I am interested in how such methods may be sped up, as it appears
 <h2>Publications, talks, and research code</h2>
 <h3>2013</h3>
 <ul>
-<li>
+<li id="MTC">
 PUBLICATION:
 Eric M. Christiansen, Vincent Rabaud, Andrew Ziegler, Irfan Essa, David Kriegman, Serge Belongie, 
 "Match-time covariance for descriptors", 
@@ -76,9 +124,16 @@ Advances in Neural Information Processing Systems (NIPS), 2012.
 <li id="eLUCID">
 CODE:
 Andrew Ziegler, Eric Christiansen, Vincent Rabaud,
-"Elucidating comparison-based descriptors",
-A built-for-mobile local descriptor, developed at Willow Garage.
+"Elucidating comparison-based descriptors".
+A built-for-mobile local descriptor, developed at Willow Garage, in C++.
 [<a href="https://github.com/emchristiansen/eLUCID">code</a>]
+</li>
+<li>
+CODE:
+Eric Christiansen,
+"CharikarLSH".
+An implementation of Moses Charikar's method for approximate nearest neighbor retrieval, in C++.
+[<a href="https://github.com/emchristiansen/CharikarLSH">code</a>]
 </li>
 </ul>
 
@@ -87,7 +142,7 @@ A built-for-mobile local descriptor, developed at Willow Garage.
 <li>
 CODE:
 Eric Christiansen,
-"GPU Acceleration of Source Inference in Shift Invariant Sparse Coding",
+"GPU Acceleration of Source Inference in Shift Invariant Sparse Coding".
 A class project, using OpenCL to accelerate sparse coding inference.
 [<a href="https://www.dropbox.com/s/x8ez1n084v6i8pc/cse262_final.pdf">report</a>, 
 <a href="https://www.dropbox.com/sh/o2lu9sgnvo1s4cs/mLexpQTxyW">code</a>]
@@ -95,14 +150,14 @@ A class project, using OpenCL to accelerate sparse coding inference.
 <li>
 CODE:
 Eric Christiansen,
-"mbtree",
+"mbtree".
 An implementation of metric-ball trees for nearest neighbor search, in Scala.
 [<a href="https://github.com/emchristiansen/mbtree">code</a>]
 </li>
 <li>
 CODE:
 Eric Christiansen,
-"DistanceLSH",
+"DistanceLSH".
 An implementation of a metric hashing for nearest neighbor search, in Haskell.
 [<a href="https://github.com/emchristiansen/DistanceLSH">code</a>]
 </li>
@@ -154,85 +209,109 @@ Neural Networks, 2007.
 </li>
 </ul>
 
-<h1>Work experience</h1>
-To date, I have completed 16 months of internships while also in the PhD program.
-I find industry to be a refreshing change of pace.
+<hr>
+<h1 id="Projects">Projects</h1>
+Throughout my PhD, I've kept sane by working on a number of side-projects.
+The coding projects often involve my interest in functional programming, and the non-coding projects often concern human empowerment.
+Here are a few from 2013:
 
-<h3>2012 - 2013: Willow Garage</h3>
-In June 2012 I started as a 3-month research intern at <a href="http://www.willowgarage.com/">Willow Garage</a>, working in robot perception.
-I liked it so much that I twice extended the internship, finally ending in March 2013.
-While there, I:
+<h3>2013</h3>
 <ul>
 <li>
-Developed a similarity-invariant version of the <a href="#LUCID">LUCID</a> descriptor.
-This new descriptor, <a href="#eLUCID">eLUCID</a>, is especially fast on mobile devices. 
-</li> 
-</ul>
-
-<h1 id="projects">Projects</h1>
-
-<h1>Miscellaneous</h1>
-
-<h1>Contact</h1>
-
-<h1>Affiliations</h1>
-	
-<h1>Eric M. Christiansen</h1>
-
-<h2>About Eric</h2>
-<p>
-I am a <a href="http://www-cse.ucsd.edu/">computer science</a> PhD candidate at the University of California, San Diego, advised by <a href="http://cseweb.ucsd.edu/~sjb/">Serge Belongie</a>.
-My primary area of research is in local descriptors methods, which are used as a building block in many computer vision systems.
-My other research interests include sparse methods, fast nearest neighbor search, and computational photography.
-My technical interests include functional programming languages.   
-This is my @personal.controllers.PersonalSite.phdYear year of study.
-</p>
-
-<h2>Bio</h2>
-<p>
-While an undergrad at <a href="http://www.swarthmore.edu/">Swarthmore College</a>, I worked in the summers with <a href="http://www.cse.ucsd.edu/~gary/">Gary Cottrell</a> on a variety of cognitive science topics, thanks to whom I have an interest in machine vision and biologically inspired models. In 2008 I graduated with a BA in math and a minor in computer science.
-</p>
-
-<p>
-In my first year at UCSD, I focused on machine learning while working with <a href="http://www-cse.ucsd.edu/~elkan/">Charles Elkan</a>. Mostly I took classes, especially ones with application to machine learning.
-</p>
-
-<p>
-In the winter of my second year, I joined the lab of Serge Belongie. With him, I've worked on computer vision applications for the visually impaired, data-driven approaches for face verification under varying conditions, and super resolution.
-</p>
-
-<h2>Research Interests</h2>
-
-<p>
-Super-resolution, object detection in video, computer vision generally, machine learning generally.
-
-<h3>Publications</h3>
-<ul>
-<li>Tess Winlock, Eric Christiansen, Serge Belongie, <a href="papers/CVAVI_07.pdf">Toward real-time grocery detection for the visually impaired</a>, Proceedings of the 3rd Workshop for Computer Vision Applications for the
-Visually Impaired (CVAVI-10), San Francisco, CA, June 2010.</li>
-  <li>Joseph P. McCleery, Lingyun Zhang, Liezhong Ge, Zhe Wang, Eric M. Christiansen, Kang Lee, Garrison W. Cottrell, <a href="papers/inversion.pdf">The roles of visual expertise and visual input in the face inversion effect: Behavioral and neurocomputational evidence</a>, Vision Research, Volume 48, Issue 5, February 2008, Pages 703-715, ISSN 0042-6989</li>
-<li>Matthew H. Tong, Adam D. Bickett, Eric M. Christiansen, Garrison W. Cottrell, <a href="papers/grammar_esn.pdf">Learning grammatical structure with Echo State Networks</a>, Neural Networks, Volume 20, Issue 3, Echo State Networks and Liquid State Machines, April 2007, Pages 424-432, ISSN 0893-6080</li>
-</ul>
-
-<h2>Contact</h2>
-<h3>Email</h3>
-<blockquote>echristiansen at cs.ucsd.edu</blockquote>
-<h3>Department Address</h3>
-<blockquote>
-Eric Christiansen, Graduate Student
-<br>UCSD Department of Computer Science and Engineering
-<br>9500 Gilman Drive, Dept. 0404
-<br>La Jolla, California 92093-0404 
-</blockquote>
-
-<h2>Links</h2>
-Some favorite sites:
-<ul>
-<li>
-<a href="http://michaelnielsen.org/blog/michael-a-nielsen/">Michael Nielsen's blog</a>
+CODE:
+Eric Christiansen,
+"PersistentMap".
+A type-safe, boilerplate-free, key-value store for Scala.
+[<a href="https://github.com/emchristiansen/PersistentMap">code</a>]
+</li>
+<li id="FoodForThought">
+NOT CODE:
+Eric Christiansen,
+"Food for Thought".
+Food for Thought (FFT) is a program I talked my advisor into funding, in which we provide Google-style free food to all members of our lab at UCSD.
+I believe it significantly increases lab morale and productivity, and I think academia badly needs to adapt to the times and widely adopt programs such as this.
+[<a href="http://23.21.130.222/">FFT website</a>]
+</li>
+<li id="OpenCVJava">
+CODE:
+Eric Christiansen, Andrey Pavlenko, and Andrey Kamaev,
+"OpenCV Java".
+I added an automatically-generated Java interface to OpenCV, with the help of employees at <a href="http://itseez.com/">Itseez</a>.
+I did it so I could use Scala for research ;).
+[<a href="http://www.willowgarage.com/blog/2013/02/19/opencv-now-supports-desktop-java">Willow Garage announcement</a>, 
+<a href="https://github.com/Itseez/opencv">Itseez announcement</a>]
+</li>
+<li id="BillyPilgrim">
+CODE:
+Eric Christiansen,
+"Billy Pilgrim".
+Billy Pilgrim is an evaluation framework for local descriptors, intended to replace <a href="http://www.vlfeat.org/benchmarks/">VLBenchmarks</a>.
+It is broken into a backend (Billy) and a frontend (Pilgrim), and is in Scala.
+[<a href="https://github.com/emchristiansen/Billy">Billy</a>,
+<a href="https://github.com/emchristiansen/Pilgrim">Pilgrim</a>]
 </li>
 <li>
-<a href="http://hunch.net/">Machine Learning (Theory)</a>
+CODE:
+Eric Christiansen,
+"salve".
+Salve is a macro and template library for adding some functional programming ideas to C++.
+[<a href="https://github.com/emchristiansen/salve">code</a>]
+</li>
+<li>
+CODE:
+Eric Christiansen,
+"sbt-latex".
+sbt-latex is a build management tool for LaTeX.
+[<a href="https://github.com/emchristiansen/sbt-latex">code</a>]
+</li>
+</ul>
+
+<hr>
+<h1 id="Miscellaneous">Miscellaneous</h1>
+
+<h2>Professional</h2>
+<ul>
+<li>
+Volunteer: CVPR 2012
+</li>
+<li>
+Reviewer: Data Mining and Knowledge Discovery, Computer Vision and Image Understanding (CVIU), International Conference on Computer Vision (ICCV)
+</li>
+</ul>
+
+<h2>Teaching</h2>
+<ul>
+<li>
+2013: Google Summer of Code mentor for OpenCV
+</li>
+<li>
+2013: TA for CSE 255, data mining (UCSD)
+</li>
+<li>
+2010: TA for CSE 252B, graduate computer vision (UCSD)
+</li>
+<li>
+2010: TA for CSE 202, graduate algorithms (UCSD)
+</li>
+<li>
+2009: TA for CSE 105, undergraduate computability (UCSD)
+</li>
+</ul>
+
+<h2>Athletics</h2>
+<ul>
+<li>
+CrossFit
+</li>
+<li>
+Brazilian Jiu-Jitsu
+</li>
+</ul>
+
+<h2>RSS favorites</h2>
+<ul>
+<li>
+<a href="hpmor.com">Harry Potter and the Methods of Rationality</a>
 </li>
 <li>
 <a href="http://boingboing.net">Boing Boing</a>
@@ -241,12 +320,39 @@ Some favorite sites:
 <a href="http://www.smbc-comics.com/">Saturday Morning Breakfast Cereal</a>
 </li>
 <li>
-<a href="http://xkcd.com">xkcd</a>
-</li>
-<li>
 <a href="http://pbfcomics.com/">Perry Bible Fellowship</a>
 </li>
 </ul>
 
-Last updated: 10 January 2011
+<hr>
+<h1 id="Contact">Contact</h1>
+<h2>Email</h2>
+eric at sparse dot st
+
+<h2>Web</h2>
+<ul>
+<li>
+<a href="http://cseweb.ucsd.edu/~echristiansen/">UCSD (needs to be updated)</a>
+</li>
+<li>
+<a href="http://scholar.google.com/citations?hl=en&user=Sz2GtLoAAAAJ">Google Scholar</a>
+</li>
+<li>
+<a href="https://plus.google.com/114834902961564956461/posts">Google+</a>
+</li>
+</ul>
+
+<h2>Address</h2>
+<address>
+4144 CSE Building (EBU3B)
+<br>UCSD Department of Computer Science and Engineering
+<br>9500 Gilman Drive, Dept. 0404
+<br>La Jolla, California 92093-0404 
+</address>
+
+<hr>
+
+<footer>
+Last updated: 29 September 2013
+</footer>
 }

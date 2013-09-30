@@ -2,6 +2,7 @@ package personal.controllers
 
 import org.joda.time.LocalDate
 import org.joda.time.Years
+import org.joda.time.Months
 
 import personal.views
 import play.api.mvc.Action
@@ -28,5 +29,11 @@ object PersonalSite extends Controller {
       case 6 => "seventh"
       case _ => ???
     }
+  }
+
+  def phdMonth = {
+    val started = new LocalDate("2008-09-23")
+    val current = new LocalDate
+    Months.monthsBetween(started, current).getMonths
   }
 }
